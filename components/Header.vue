@@ -2,11 +2,13 @@
   <div>
     <header class="header">
       <h1 class="logo">
-        <a href="https://microcms.io">
-          <img class="logoImg" src="/images/logo.svg" alt="microCMS" />
+        <!-- TODO -->
+        <a href="https://laughing-goldberg-67613e.netlify.app/">
+          <!-- <img class="logoImg" src="/images/logo.svg" alt="microCMS" /> -->
+          Think Big Act Local
         </a>
       </h1>
-      <button class="menuBtn" @click="toggleOpen()">
+      <!-- <button class="menuBtn" @click="toggleOpen()">
         <img src="/images/icon_menu.svg" alt="menu" />
       </button>
       <div v-if="open" class="mask" @click="setOpen(false)"></div>
@@ -36,7 +38,7 @@
             >
           </li>
         </ul>
-      </div>
+      </div> -->
     </header>
     <div class="empty"></div>
   </div>

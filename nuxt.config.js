@@ -20,7 +20,7 @@ export default {
       prefix: 'og: http://ogp.me/ns#',
       lang: 'ja',
     },
-    titleTemplate: '%s | microCMSブログ',
+    titleTemplate: '%s | Think Big Act Local',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -28,25 +28,25 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'microCMSはAPIベースの日本製ヘッドレスCMSです。本ブログはmicroCMSの開発メンバーがmicroCMSの使い方や技術的な内容を発信するブログです。',
+          'サービス開発の記録を書き残していくブログ',
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'microCMSブログ',
+        content: 'Think Big Act Local',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://blog.microcms.io',
+        content: 'https://himaratsu.com',
       },
-      { hid: 'og:title', property: 'og:title', content: 'microCMSブログ' },
+      { hid: 'og:title', property: 'og:title', content: 'Think Big Act Local' },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'microCMSはAPIベースの日本製ヘッドレスCMSです。本ブログはmicroCMSの開発メンバーがmicroCMSの使い方や技術的な内容を発信するブログです。',
+          'サービス開発の記録を書き残していくブログ',
       },
       {
         hid: 'og:image',
@@ -55,7 +55,7 @@ export default {
       },
 
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@micro_cms' },
+      { name: 'twitter:site', content: '@himara2' },
     ],
     link: [
       {
@@ -106,22 +106,22 @@ export default {
     ['@nuxtjs/dayjs'],
     GA_ID
       ? [
-          '@nuxtjs/google-analytics',
-          {
-            id: GA_ID,
-          },
-        ]
+        '@nuxtjs/google-analytics',
+        {
+          id: GA_ID,
+        },
+      ]
       : undefined,
     FB_PIXEL_ID
       ? [
-          'nuxt-facebook-pixel-module',
-          {
-            track: 'PageView',
-            pixelId: FB_PIXEL_ID,
-            autoPageView: true,
-            disabled: false,
-          },
-        ]
+        'nuxt-facebook-pixel-module',
+        {
+          track: 'PageView',
+          pixelId: FB_PIXEL_ID,
+          autoPageView: true,
+          disabled: false,
+        },
+      ]
       : undefined,
     ['@nuxtjs/sitemap'],
     '@nuxtjs/feed',
@@ -308,7 +308,7 @@ export default {
   },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://blog.microcms.io',
+    hostname: 'https://himaratsu.com',
     exclude: ['/draft', '/404'],
     gzip: true,
     trailingSlash: true,
@@ -319,7 +319,7 @@ export default {
       async create(feed) {
         feed.options = {
           title: 'microCMSブログ',
-          link: 'https://blog.microcms.io/feed.xml',
+          link: 'https://himratsu.com/feed.xml',
           description:
             'microCMSはAPIベースの日本製ヘッドレスCMSです。本ブログはmicroCMSの開発メンバーがmicroCMSの使い方や技術的な内容を発信するブログです。',
         };
@@ -350,7 +350,7 @@ export default {
       async create(feed) {
         feed.options = {
           title: '更新情報｜microCMSブログ',
-          link: 'https://blog.microcms.io/feed.xml',
+          link: 'https://himaratsu.com/feed.xml',
           description:
             'microCMSはAPIベースの日本製ヘッドレスCMSです。本ブログはmicroCMSの開発メンバーがmicroCMSの使い方や技術的な内容を発信するブログです。',
         };
@@ -368,7 +368,7 @@ export default {
           feed.addItem({
             title: post.title,
             id: post.id,
-            link: `https://blog.microcms.io/${post.id}/`,
+            link: `https://himaratsu.com/${post.id}/`,
             description: post.description,
             content: post.description,
             date: new Date(post.publishedAt || post.createdAt),
@@ -402,7 +402,7 @@ export default {
           feed.addItem({
             title: post.title,
             id: post.id,
-            link: `https://blog.microcms.io/${post.id}/`,
+            link: `https://himaratsu.com/${post.id}/`,
             description: post.description,
             content: post.description,
             date: new Date(post.publishedAt || post.createdAt),
