@@ -1,22 +1,5 @@
 <template>
   <footer class="footer">
-    <ul class="lists">
-      <!-- <li class="list">
-        <a href="https://microcms.co.jp">運営会社</a>
-      </li>
-      <li class="list">
-        <a href="https://microcms.io/law">特定商取引法に基づく表記</a>
-      </li>
-      <li class="list">
-        <a href="https://microcms.io/terms">利用規約</a>
-      </li>
-      <li class="list">
-        <a href="https://microcms.io/policy">プライバシーポリシー</a>
-      </li> -->
-      <!-- <li class="list">
-        <a href="https://twitter.com/himara2">お問い合わせ</a>
-      </li> -->
-    </ul>
     <p class="cr">Copyright © himara2 All rights reserved.</p>
   </footer>
 </template>

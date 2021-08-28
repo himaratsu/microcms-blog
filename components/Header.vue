@@ -3,42 +3,8 @@
     <header class="header">
       <h1 class="logo">
         <!-- TODO -->
-        <a href="https://laughing-goldberg-67613e.netlify.app/">
-          <!-- <img class="logoImg" src="/images/logo.svg" alt="microCMS" /> -->
-          Think Big Act Local
-        </a>
+        <a href="https://himaratsu.com/"> Think Big Act Local </a>
       </h1>
-      <!-- <button class="menuBtn" @click="toggleOpen()">
-        <img src="/images/icon_menu.svg" alt="menu" />
-      </button>
-      <div v-if="open" class="mask" @click="setOpen(false)"></div>
-
-      <div class="menu" :class="{ isOpen: open }">
-        <ul class="lists">
-          <li class="list">
-            <a href="https://microcms.io/pricing">料金</a>
-          </li>
-          <li class="list">
-            <a href="https://document.microcms.io">ドキュメント</a>
-          </li>
-          <li class="list">
-            <a href="https://blog.microcms.io">ブログ</a>
-          </li>
-          <li class="list">
-            <a href="https://microcms.io/contact">お問い合わせ</a>
-          </li>
-        </ul>
-        <ul class="lists">
-          <li class="list">
-            <a class="signin" href="https://app.microcms.io/signin">ログイン</a>
-          </li>
-          <li class="list">
-            <a class="signup" :href="`https://app.microcms.io${params}`"
-              >新規登録</a
-            >
-          </li>
-        </ul>
-      </div> -->
     </header>
     <div class="empty"></div>
   </div>

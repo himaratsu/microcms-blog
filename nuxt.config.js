@@ -51,7 +51,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://blog.microcms.io/images/ogp.png',
+        content: 'https://himaratsu.com/images/ogp.png',
       },
 
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -61,12 +61,12 @@ export default {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: 'https://blog.microcms.io/favicon.png',
+        href: 'https://himaratsu.com/favicon.png',
       },
       {
         rel: 'alternate',
         type: 'application/atom+xml',
-        href: 'https://blog.microcms.io/feed.xml',
+        href: 'https://himaratsu.com/feed.xml',
         title: 'Atom',
       },
     ],
@@ -334,7 +334,7 @@ export default {
           feed.addItem({
             title: post.title,
             id: post.id,
-            link: `https://blog.microcms.io/${post.id}/`,
+            link: `https://himaratsu.com/${post.id}/`,
             description: post.description,
             content: post.description,
             date: new Date(post.publishedAt || post.createdAt),
@@ -384,7 +384,7 @@ export default {
       async create(feed) {
         feed.options = {
           title: '導入事例｜microCMSブログ',
-          link: 'https://blog.microcms.io/feed.xml',
+          link: 'https://himaratsu.com/feed.xml',
           description:
             '日常の勉強メモ',
         };

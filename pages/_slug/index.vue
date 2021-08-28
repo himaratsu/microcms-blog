@@ -171,7 +171,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://blog.microcms.io/${this.id}/`,
+          content: `https://himaratsu.com/${this.id}/`,
         },
         {
           hid: 'og:image',

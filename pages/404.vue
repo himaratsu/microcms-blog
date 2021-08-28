@@ -16,7 +16,7 @@ export default {
   head() {
     return {
       titleTemplate: null,
-      title: 'ページが見つかりません | microCMSブログ',
+      title: 'ページが見つかりません | Think Big Act Local',
     };
   },
 };

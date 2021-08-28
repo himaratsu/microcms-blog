@@ -182,7 +182,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://blog.microcms.io/${this.data && this.data.id}`,
+          content: `https://himaratsu.com/${this.data && this.data.id}`,
         },
         {
           hid: 'og:image',
@@ -193,14 +193,12 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href:
-            'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css',
         },
       ],
       script: [
         {
-          src:
-            'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js',
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js',
           async: true,
         },
       ],

@@ -18,7 +18,7 @@
       </li>
       <li class="shareList">
         <a
-          href="https://blog.microcms.io/feed.xml"
+          href="https://himaratsu.com/feed.xml"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -45,13 +45,13 @@ export default {
     twitterLink() {
       return `https://twitter.com/intent/tweet?text=${encodeURIComponent(
         this.title
-      )}&url=https://blog.microcms.io/${this.id}/&hashtags=microcms`;
+      )}&url=https://himaratsu.com/${this.id}/&hashtags=microcms`;
     },
     facebookLink() {
-      return `https://www.facebook.com/sharer.php?u=https://blog.microcms.io/${this.id}/`;
+      return `https://www.facebook.com/sharer.php?u=https://himaratsu.com/${this.id}/`;
     },
     hatenaLink() {
-      return `https://b.hatena.ne.jp/entry/https://blog.microcms.io/${this.id}/`;
+      return `https://b.hatena.ne.jp/entry/https://himaratsu.com/${this.id}/`;
     },
   },
 };
