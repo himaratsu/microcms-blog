@@ -318,10 +318,10 @@ export default {
       path: '/feed.xml',
       async create(feed) {
         feed.options = {
-          title: 'microCMSブログ',
+          title: 'Think Big Act Local',
           link: 'https://himratsu.com/feed.xml',
           description:
-            'microCMSはAPIベースの日本製ヘッドレスCMSです。本ブログはmicroCMSの開発メンバーがmicroCMSの使い方や技術的な内容を発信するブログです。',
+            '日常の',
         };
 
         const posts = await axios
@@ -349,10 +349,10 @@ export default {
       path: '/feed_update.xml',
       async create(feed) {
         feed.options = {
-          title: '更新情報｜microCMSブログ',
+          title: '更新情報｜Think Big Act Local',
           link: 'https://himaratsu.com/feed.xml',
           description:
-            'microCMSはAPIベースの日本製ヘッドレスCMSです。本ブログはmicroCMSの開発メンバーがmicroCMSの使い方や技術的な内容を発信するブログです。',
+            '日常の勉強メモ',
         };
 
         const posts = await axios
@@ -386,7 +386,7 @@ export default {
           title: '導入事例｜microCMSブログ',
           link: 'https://blog.microcms.io/feed.xml',
           description:
-            'microCMSはAPIベースの日本製ヘッドレスCMSです。本ブログはmicroCMSの開発メンバーがmicroCMSの使い方や技術的な内容を発信するブログです。',
+            '日常の勉強メモ',
         };
 
         const posts = await axios

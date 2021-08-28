@@ -121,7 +121,7 @@ export default {
   head() {
     return {
       titleTemplate: null,
-      title: 'microCMSブログ',
+      title: 'Think Big Act Local',
     };
   },
 };
@@ -238,6 +238,7 @@ export default {
   .ogimage {
     width: 335px;
     height: 176px;
+    object-fit: cover;
     border-radius: 5px;
   }
 

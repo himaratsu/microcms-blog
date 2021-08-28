@@ -268,6 +268,8 @@ export default {
   .ogimage {
     display: block;
     width: 100%;
+    max-height: 420px;
+    object-fit: cover;
   }
 
   .container {
