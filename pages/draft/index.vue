@@ -32,7 +32,6 @@
             <Toc :id="data.id" :toc="toc" :visible="data.toc_visible" />
             <Post :body="data.body" />
             <Writer v-if="data.writer" :writer="data.writer" />
-            <Partner v-if="data.partner" :partner="data.partner" />
             <Conversion :id="data.id" />
             <RelatedBlogs
               v-if="data.related_blogs.length > 0"
@@ -106,15 +105,6 @@ export default {
             url: '',
           },
           text: '',
-        },
-        partner: {
-          id: '',
-          company: '',
-          url: '',
-          description: '',
-          logo: {
-            url: '',
-          },
         },
         category: {
           name: '',
