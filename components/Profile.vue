@@ -1,7 +1,11 @@
 <template>
   <div class="wrapper">
     <h1 class="pageTitle">このブログについて</h1>
-    <div class="description" v-html="profile.description"></div>
+    <div
+      v-if="profile.description"
+      class="description"
+      v-html="profile.description"
+    ></div>
   </div>
 </template>
 
