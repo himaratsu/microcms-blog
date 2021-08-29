@@ -27,8 +27,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'サービス開発の記録を書き残していくブログ',
+        content: 'サービス開発の記録を書き残していくブログ',
       },
       {
         hid: 'og:site_name',
@@ -45,8 +44,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content:
-          'サービス開発の記録を書き残していくブログ',
+        content: 'サービス開発の記録を書き残していくブログ',
       },
       {
         hid: 'og:image',
@@ -106,22 +104,22 @@ export default {
     ['@nuxtjs/dayjs'],
     GA_ID
       ? [
-        '@nuxtjs/google-analytics',
-        {
-          id: GA_ID,
-        },
-      ]
+          '@nuxtjs/google-analytics',
+          {
+            id: GA_ID,
+          },
+        ]
       : undefined,
     FB_PIXEL_ID
       ? [
-        'nuxt-facebook-pixel-module',
-        {
-          track: 'PageView',
-          pixelId: FB_PIXEL_ID,
-          autoPageView: true,
-          disabled: false,
-        },
-      ]
+          'nuxt-facebook-pixel-module',
+          {
+            track: 'PageView',
+            pixelId: FB_PIXEL_ID,
+            autoPageView: true,
+            disabled: false,
+          },
+        ]
       : undefined,
     ['@nuxtjs/sitemap'],
     '@nuxtjs/feed',
@@ -320,8 +318,7 @@ export default {
         feed.options = {
           title: 'Think Big Act Local',
           link: 'https://himratsu.com/feed.xml',
-          description:
-            '日常の',
+          description: '日常の',
         };
 
         const posts = await axios
@@ -351,8 +348,7 @@ export default {
         feed.options = {
           title: '更新情報｜Think Big Act Local',
           link: 'https://himaratsu.com/feed.xml',
-          description:
-            '日常の勉強メモ',
+          description: '日常の勉強メモ',
         };
 
         const posts = await axios
@@ -385,8 +381,7 @@ export default {
         feed.options = {
           title: '導入事例｜microCMSブログ',
           link: 'https://himaratsu.com/feed.xml',
-          description:
-            '日常の勉強メモ',
+          description: '日常の勉強メモ',
         };
 
         const posts = await axios

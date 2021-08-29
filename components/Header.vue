@@ -60,6 +60,8 @@ export default {
 
     a {
       display: block;
+      font-weight: bold;
+      font-size: 1.1em;
       height: 28px;
     }
   }

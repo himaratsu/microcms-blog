@@ -4,17 +4,6 @@
     <ul>
       <li v-for="content in contents" :key="content.id" class="list">
         <nuxt-link :to="`/${content.id}`" class="link">
-          <picture v-if="content.ogimage">
-            <source
-              type="image/webp"
-              :data-srcset="content.ogimage.url + '?w=560&fm=webp'"
-            />
-            <img
-              :data-src="content.ogimage.url + '?w=560&q=100'"
-              class="image lazyload"
-              alt
-            />
-          </picture>
           <p class="title">{{ content.title }}</p>
         </nuxt-link>
       </li>

@@ -45,7 +45,7 @@
         <Banner id="list" :banner="banner" />
         <Search />
         <Categories :categories="categories" />
-        <PopularArticles :contents="popularArticles" />
+        <!-- <PopularArticles :contents="popularArticles" /> -->
       </aside>
     </div>
     <Footer />

@@ -59,7 +59,7 @@
         <Banner :id="`blog-${id}`" :banner="banner" />
         <Search />
         <Categories :categories="categories" />
-        <PopularArticles :contents="popularArticles" />
+        <!-- <PopularArticles :contents="popularArticles" /> -->
         <Latest :contents="contents" />
       </aside>
     </div>

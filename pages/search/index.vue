@@ -74,7 +74,7 @@
       <aside class="aside">
         <Banner id="search" :banner="banner" />
         <Categories :categories="categories" />
-        <PopularArticles :contents="popularArticles" />
+        <!-- <PopularArticles :contents="popularArticles" /> -->
       </aside>
     </div>
     <Footer />

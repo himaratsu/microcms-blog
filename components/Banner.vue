@@ -34,6 +34,10 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  margin-top: 24px;
+}
+
 .image {
   width: 300px;
   border-radius: 5px;
