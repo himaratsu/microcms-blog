@@ -43,7 +43,7 @@
       <aside class="aside">
         <Banner :id="`draft-${data.id}`" :banner="banner" />
         <Search />
-        <Profile id="profile" :profile="profile" />
+        <Profile id="profile" :profile="data.profile.description" />
         <Works :works="works" />
         <Categories :categories="categories" />
         <Latest :contents="contents" />
@@ -199,14 +199,12 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href:
-            'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css',
         },
       ],
       script: [
         {
-          src:
-            'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js',
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js',
           async: true,
         },
       ],
