@@ -45,6 +45,7 @@
         <Banner id="list" :banner="banner" />
         <Search />
         <Profile id="profile" :profile="profile" />
+        <Works :works="works" />
         <Categories :categories="categories" />
         <!-- <PopularArticles :contents="popularArticles" /> -->
       </aside>
@@ -102,6 +103,12 @@ export default {
         headers: { 'X-API-KEY': $config.apiKey },
       }
     );
+    const works = await axios.get(
+      `https://${$config.serviceId}.microcms.io/api/v1/works?limit=10`,
+      {
+        headers: { 'X-API-KEY': $config.apiKey },
+      }
+    );
     const categories = await axios.get(
       `https://${$config.serviceId}.microcms.io/api/v1/categories?limit=100`,
       {
@@ -116,6 +123,7 @@ export default {
       ...data,
       categories: categories.data.contents,
       selectedCategory,
+      works: works.data.contents,
       popularArticles,
       banner,
       profile,

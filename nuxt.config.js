@@ -104,22 +104,22 @@ export default {
     ['@nuxtjs/dayjs'],
     GA_ID
       ? [
-          '@nuxtjs/google-analytics',
-          {
-            id: GA_ID,
-          },
-        ]
+        '@nuxtjs/google-analytics',
+        {
+          id: GA_ID,
+        },
+      ]
       : undefined,
     FB_PIXEL_ID
       ? [
-          'nuxt-facebook-pixel-module',
-          {
-            track: 'PageView',
-            pixelId: FB_PIXEL_ID,
-            autoPageView: true,
-            disabled: false,
-          },
-        ]
+        'nuxt-facebook-pixel-module',
+        {
+          track: 'PageView',
+          pixelId: FB_PIXEL_ID,
+          autoPageView: true,
+          disabled: false,
+        },
+      ]
       : undefined,
     ['@nuxtjs/sitemap'],
     '@nuxtjs/feed',
@@ -225,6 +225,13 @@ export default {
         .then(({ data }) => {
           return data;
         });
+      const works = await axios
+        .get(`https://${SERVICE_ID}.microcms.io/api/v1/works`, {
+          headers: { 'X-API-KEY': API_KEY },
+        })
+        .then(({ data }) => {
+          return data;
+        });
 
       // 詳細ページ
       const getArticles = (offset = 0) => {
@@ -243,7 +250,7 @@ export default {
             return [
               ...res.data.contents.map((content) => ({
                 route: `/${content.id}`,
-                payload: { content, popularArticles, banner, profile },
+                payload: { content, popularArticles, banner, profile, works },
               })),
               ...articles,
             ];
@@ -254,7 +261,7 @@ export default {
       // 一覧ページ
       const index = {
         route: '/',
-        payload: { popularArticles, banner, profile },
+        payload: { popularArticles, banner, profile, works },
       };
 
       // 一覧のページング
@@ -268,14 +275,14 @@ export default {
         .then((res) =>
           range(1, Math.ceil(res.data.totalCount / 10)).map((p) => ({
             route: `/page/${p}`,
-            payload: { popularArticles, banner, profile },
+            payload: { popularArticles, banner, profile, works },
           }))
         );
 
       // 検索ページ
       const search = {
         route: '/search',
-        payload: { popularArticles, banner, profile },
+        payload: { popularArticles, banner, profile, works },
       };
 
       const categories = await axios
@@ -301,7 +308,7 @@ export default {
             .then((res) => {
               return range(1, Math.ceil(res.data.totalCount / 10)).map((p) => ({
                 route: `/category/${category}/page/${p}`,
-                payload: { popularArticles, banner, profile },
+                payload: { popularArticles, banner, profile, works },
               }));
             })
         )
