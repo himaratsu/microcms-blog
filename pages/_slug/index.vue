@@ -57,6 +57,7 @@
       <aside class="aside">
         <Banner :id="`blog-${id}`" :banner="banner" />
         <Search />
+        <Profile id="profile" :profile="profile" />
         <Categories :categories="categories" />
         <!-- <PopularArticles :contents="popularArticles" /> -->
         <Latest :contents="contents" />
@@ -106,6 +107,17 @@ export default {
               }
             )
           ).data;
+    const profile =
+      payload !== undefined
+        ? payload.profile
+        : (
+            await axios.get(
+              `https://${$config.serviceId}.microcms.io/api/v1/profile`,
+              {
+                headers: { 'X-API-KEY': $config.apiKey },
+              }
+            )
+          ).data;
     const {
       data: { contents },
     } = await axios.get(
@@ -144,6 +156,7 @@ export default {
       ...data,
       popularArticles,
       banner,
+      profile,
       body: $.html(),
       toc,
       categories: categories.data.contents,

@@ -218,6 +218,13 @@ export default {
         .then(({ data }) => {
           return data;
         });
+      const profile = await axios
+        .get(`https://${SERVICE_ID}.microcms.io/api/v1/profile`, {
+          headers: { 'X-API-KEY': API_KEY },
+        })
+        .then(({ data }) => {
+          return data;
+        });
 
       // 詳細ページ
       const getArticles = (offset = 0) => {
@@ -236,7 +243,7 @@ export default {
             return [
               ...res.data.contents.map((content) => ({
                 route: `/${content.id}`,
-                payload: { content, popularArticles, banner },
+                payload: { content, popularArticles, banner, profile },
               })),
               ...articles,
             ];
@@ -247,7 +254,7 @@ export default {
       // 一覧ページ
       const index = {
         route: '/',
-        payload: { popularArticles, banner },
+        payload: { popularArticles, banner, profile },
       };
 
       // 一覧のページング
@@ -261,14 +268,14 @@ export default {
         .then((res) =>
           range(1, Math.ceil(res.data.totalCount / 10)).map((p) => ({
             route: `/page/${p}`,
-            payload: { popularArticles, banner },
+            payload: { popularArticles, banner, profile },
           }))
         );
 
       // 検索ページ
       const search = {
         route: '/search',
-        payload: { popularArticles, banner },
+        payload: { popularArticles, banner, profile },
       };
 
       const categories = await axios
@@ -294,7 +301,7 @@ export default {
             .then((res) => {
               return range(1, Math.ceil(res.data.totalCount / 10)).map((p) => ({
                 route: `/category/${category}/page/${p}`,
-                payload: { popularArticles, banner },
+                payload: { popularArticles, banner, profile },
               }));
             })
         )

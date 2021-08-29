@@ -43,6 +43,7 @@
       <aside class="aside">
         <Banner :id="`draft-${data.id}`" :banner="banner" />
         <Search />
+        <Profile id="profile" :profile="profile" />
         <Categories :categories="categories" />
         <Latest :contents="contents" />
       </aside>
@@ -72,6 +73,12 @@ export default {
         }
       )
     ).data;
+    const profile = await axios.get(
+      `https://${$config.serviceId}.microcms.io/api/v1/profile`,
+      {
+        headers: { 'X-API-KEY': $config.apiKey },
+      }
+    ).data;
     const {
       data: { contents },
     } = await axios.get(
@@ -83,6 +90,7 @@ export default {
     return {
       categories: categories.data.contents,
       banner,
+      profile,
       contents,
     };
   },

@@ -44,6 +44,7 @@
       <aside class="aside">
         <Banner id="list" :banner="banner" />
         <Search />
+        <Profile id="profile" :profile="profile" />
         <Categories :categories="categories" />
         <!-- <PopularArticles :contents="popularArticles" /> -->
       </aside>
@@ -82,6 +83,17 @@ export default {
               }
             )
           ).data;
+    const profile =
+      payload !== undefined
+        ? payload.profile
+        : (
+            await axios.get(
+              `https://${$config.serviceId}.microcms.io/api/v1/profile`,
+              {
+                headers: { 'X-API-KEY': $config.apiKey },
+              }
+            )
+          ).data;
     const { data } = await axios.get(
       `https://${$config.serviceId}.microcms.io/api/v1/blog?limit=${limit}${
         categoryId === undefined ? '' : `&filters=category[equals]${categoryId}`
@@ -106,6 +118,7 @@ export default {
       selectedCategory,
       popularArticles,
       banner,
+      profile,
       page,
       pager: [...Array(Math.ceil(data.totalCount / limit)).keys()],
     };
