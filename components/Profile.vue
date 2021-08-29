@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
     <h1 class="pageTitle">このブログについて</h1>
-    <div
+    <!-- <div
       v-if="profile.description"
       class="description"
       v-html="profile.description"
-    ></div>
+    /> -->
   </div>
 </template>
 
@@ -14,8 +14,7 @@ export default {
   props: {
     profile: {
       type: Object,
-      required: false,
-      default: undefined,
+      required: true,
     },
     id: {
       type: String,
