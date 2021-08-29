@@ -8,10 +8,6 @@
           {{ $dayjs(createdAt).format('YYYY/MM/DD') }}
         </time>
       </span>
-      <span v-if="author" class="author">
-        <img src="/images/icon_author.svg" alt />
-        {{ author }}
-      </span>
     </div>
   </div>
 </template>
@@ -22,11 +18,6 @@ export default {
     createdAt: {
       type: String,
       required: true,
-    },
-    author: {
-      type: String,
-      required: false,
-      default: undefined,
     },
     category: {
       type: Object,
@@ -69,18 +60,6 @@ export default {
       height: 16px;
     }
   }
-
-  .author {
-    display: inline-flex;
-    align-items: center;
-    color: #616269;
-    white-space: nowrap;
-
-    img {
-      margin-right: 6px;
-      height: 16px;
-    }
-  }
 }
 @media (max-width: 600px) {
   .meta {
@@ -104,18 +83,6 @@ export default {
     align-items: center;
     color: #616269;
     margin-right: 20px;
-    white-space: nowrap;
-
-    img {
-      margin-right: 6px;
-      height: 14px;
-    }
-  }
-
-  .author {
-    display: inline-flex;
-    align-items: center;
-    color: #616269;
     white-space: nowrap;
 
     img {

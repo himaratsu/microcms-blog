@@ -38,11 +38,7 @@
           <Share :id="id" :title="title" />
           <div class="container">
             <h1 class="title">{{ title }}</h1>
-            <Meta
-              :created-at="publishedAt || createdAt"
-              :author="writer !== null ? writer.name : ''"
-              :category="category"
-            />
+            <Meta :created-at="publishedAt || createdAt" :category="category" />
             <Toc :id="id" :toc="toc" :visible="toc_visible" />
             <Post :body="body" />
             <Writer v-if="writer" :writer="writer" />

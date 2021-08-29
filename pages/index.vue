@@ -26,7 +26,6 @@
                 <dd>
                   <Meta
                     :created-at="content.publishedAt || content.createdAt"
-                    :author="content.writer !== null ? content.writer.name : ''"
                     :category="content.category"
                   />
                 </dd>

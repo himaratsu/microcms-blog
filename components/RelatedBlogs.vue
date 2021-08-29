@@ -18,11 +18,7 @@
           <dl class="content">
             <dt class="title">{{ blog.title }}</dt>
             <dd>
-              <Meta
-                :created-at="blog.createdAt"
-                :author="blog.writer !== null ? blog.writer.name : ''"
-                :category="blog.category"
-              />
+              <Meta :created-at="blog.createdAt" :category="blog.category" />
             </dd>
           </dl>
         </nuxt-link>

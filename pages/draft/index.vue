@@ -26,7 +26,6 @@
             <h1 class="title">{{ data.title }}</h1>
             <Meta
               :created-at="data.publishedAt || data.createdAt"
-              :author="data.writer !== null ? data.writer.name : ''"
               :category="data.category"
             />
             <Toc :id="data.id" :toc="toc" :visible="data.toc_visible" />
@@ -199,12 +198,14 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css',
+          href:
+            'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css',
         },
       ],
       script: [
         {
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js',
+          src:
+            'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js',
           async: true,
         },
       ],
