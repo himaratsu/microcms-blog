@@ -58,6 +58,7 @@
         <Banner :id="`blog-${id}`" :banner="banner" />
         <Search />
         <Profile id="profile" :profile="profile" />
+        <Works :works="works" />
         <Categories :categories="categories" />
         <!-- <PopularArticles :contents="popularArticles" /> -->
         <Latest :contents="contents" />
@@ -118,6 +119,12 @@ export default {
               }
             )
           ).data;
+    const works = await axios.get(
+      `https://${$config.serviceId}.microcms.io/api/v1/works?limit=10`,
+      {
+        headers: { 'X-API-KEY': $config.apiKey },
+      }
+    );
     const {
       data: { contents },
     } = await axios.get(
@@ -161,6 +168,7 @@ export default {
       toc,
       categories: categories.data.contents,
       contents,
+      works: works.data.contents,
     };
   },
   data() {

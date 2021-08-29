@@ -3,11 +3,9 @@
     <h1 class="pageTitle">つくったもの</h1>
     <ul>
       <li v-for="work in works" :key="work.id" class="list">
-        <a v-bind:href="work.link" class="link" target="_blank"
-          >{{ work.title }}
-        </a>
+        <a :href="work.link" class="link" target="_blank">{{ work.title }} </a>
 
-        <a v-bind:href="work.link" target="_blank">
+        <a :href="work.link" target="_blank">
           <picture v-if="work.image">
             <source
               type="image/webp"

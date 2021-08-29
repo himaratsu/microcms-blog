@@ -104,22 +104,22 @@ export default {
     ['@nuxtjs/dayjs'],
     GA_ID
       ? [
-        '@nuxtjs/google-analytics',
-        {
-          id: GA_ID,
-        },
-      ]
+          '@nuxtjs/google-analytics',
+          {
+            id: GA_ID,
+          },
+        ]
       : undefined,
     FB_PIXEL_ID
       ? [
-        'nuxt-facebook-pixel-module',
-        {
-          track: 'PageView',
-          pixelId: FB_PIXEL_ID,
-          autoPageView: true,
-          disabled: false,
-        },
-      ]
+          'nuxt-facebook-pixel-module',
+          {
+            track: 'PageView',
+            pixelId: FB_PIXEL_ID,
+            autoPageView: true,
+            disabled: false,
+          },
+        ]
       : undefined,
     ['@nuxtjs/sitemap'],
     '@nuxtjs/feed',
