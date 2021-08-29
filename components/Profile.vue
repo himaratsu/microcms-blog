@@ -1,17 +1,20 @@
 <template>
   <div class="wrapper">
     <h1 class="pageTitle">このブログについて</h1>
-    <div class="description" v-html="description" />
+    <div class="description" v-html="profile.description" />
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    description: {
+    profile: {
+      type: Object,
+      required: true,
+    },
+    id: {
       type: String,
       required: true,
-      default: '',
     },
   },
 };

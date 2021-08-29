@@ -57,7 +57,7 @@
       <aside class="aside">
         <Banner :id="`blog-${id}`" :banner="banner" />
         <Search />
-        <Profile id="profile" :profile="profile.description" />
+        <Profile id="profile" :profile="profile" />
         <Works :works="works" />
         <Categories :categories="categories" />
         <!-- <PopularArticles :contents="popularArticles" /> -->

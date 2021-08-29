@@ -43,7 +43,7 @@
       <aside class="aside">
         <Banner :id="`draft-${data.id}`" :banner="banner" />
         <Search />
-        <Profile id="profile" :profile="data.profile.description" />
+        <!-- <Profile id="profile" :profile="profile" /> -->
         <Works :works="works" />
         <Categories :categories="categories" />
         <Latest :contents="contents" />
