@@ -124,7 +124,7 @@ export default {
     const {
       data: { contents },
     } = await axios.get(
-      `https://${$config.serviceId}.microcms.io/api/v1/blog`,
+      `https://${$config.serviceId}.microcms.io/api/v1/blog?limit=5`,
       {
         headers: { 'X-API-KEY': $config.apiKey },
       }
