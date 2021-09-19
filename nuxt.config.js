@@ -59,7 +59,7 @@ export default {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: 'https://himaratsu.com/favicon.png',
+        href: 'https://himaratsu.com/favicon_2.png',
       },
       {
         rel: 'alternate',
